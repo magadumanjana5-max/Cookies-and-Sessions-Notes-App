@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical Notes - Keep Growing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="site-header">
+      <p class="eyebrow">A little progress, every day</p>
+      <h1>Technical Notes <span>- Keep Growing 🚀</span></h1>
+      <p class="tagline">Learn <b>•</b> Practice <b>•</b> Improve <b>•</b> Grow</p>
+    </header>
+
+    <section class="intro">
+      <p class="intro-copy">Collect the concepts, commands, and breakthroughs that move your technical journey forward.</p>
+    </section>
+
+    <section class="workspace" aria-label="Notes workspace">
+      <form id="note-form" class="note-form">
+        <div class="form-heading">
+          <div>
+            <p class="eyebrow">Capture an idea</p>
+            <h2>New note</h2>
+          </div>
+          <span class="form-mark">✦</span>
+        </div>
+        <label for="title">Title</label>
+        <input id="title" name="title" type="text" placeholder="A small idea" maxlength="100" required>
+        <label for="description">Description</label>
+        <textarea id="description" name="description" rows="6" placeholder="Explain the insight in your own words..." maxlength="2000" required></textarea>
+        <button type="submit" class="primary-button">Save note <span aria-hidden="true">↗</span></button>
+        <p id="form-message" class="form-message" role="status"></p>
+      </form>
+
+      <section class="notes-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Your knowledge base</p>
+            <h2>All notes <span id="note-count">0</span></h2>
+          </div>
+          <span class="status-dot" title="Connected to the local Express API"></span>
+        </div>
+        <div id="notes-list" class="notes-list" aria-live="polite"></div>
+      </section>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
